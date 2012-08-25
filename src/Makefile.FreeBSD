@@ -1,0 +1,20 @@
+include ../config/config.FreeBSD.Mk
+include ../config/config.Mk
+include objects.Mk
+
+BIN=../bin/example
+
+.SUFFIXES: .o .cpp
+
+all: ${BIN}
+
+${BIN}: ${OBJ}
+	${LD} -o ${BIN} ${OBJ} -lpng -lglut -lGLEW -lGL ${LDFLAGS} 
+
+.cpp.o:
+	${CXX} -c -I../include ${CXXFLAGS} -o $@ $<
+
+clean:
+	rm -f ${OBJ}
+	rm -f ${BIN}
+

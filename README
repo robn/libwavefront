@@ -1,0 +1,14 @@
+COMPILING
+---------
+To compile this example software, simply run the make utility for your platform
+whilst passing it the respective Makefile for your platform as a parameter.
+
+i.e on FreeBSD
+
+$ make -f Makefile.FreeBSD
+
+RUNNING
+-------
+Ensure you are in the root directory of the extracted package and issue
+
+$ bin/example

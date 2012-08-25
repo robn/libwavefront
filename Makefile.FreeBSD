@@ -1,0 +1,5 @@
+all:
+	@cd src && ${MAKE} -f Makefile.FreeBSD
+
+clean:
+	@cd src && ${MAKE} -f Makefile.FreeBSD clean
